@@ -1,12 +1,12 @@
 /**
  * Full page regualations
  */
-$overlay-color: Silver;
+$overlay-color: White;
 $bg-color: White;
-$inner-border: rgb(226, 226, 226);
+$inner-border: Black;
 $tools-align: right;
 // Accept button color
-$button-color: rgb(0, 177, 247);
+$button-color: Black;
 $button-disabled: Silver;
 // Discard link
 $discard-color: rgb(202, 4, 4);
@@ -40,7 +40,14 @@ $discard-color: rgb(202, 4, 4);
     background-color: $bg-color;
     padding: 32px 16px 16px 16px;
 
-    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.3);
+    line-height: 150%;
+    border: solid 6px Black;
+    // box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.3);
+
+    a {
+      color: Black;
+      text-decoration: underline;
+    }
   }
 
   .rh-inner-container {

@@ -5,7 +5,7 @@
   width: 100vw;
   height: 100vh;
   position: fixed;
-  background-color: rgba(192, 192, 192, 0.75);
+  background-color: rgba(255, 255, 255, 0.75);
   box-sizing: border-box;
   padding: 32px;
   z-index: 1033;
@@ -24,14 +24,18 @@
     width: 100%;
     background-color: White;
     padding: 32px 16px 16px 16px;
-    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.3); }
+    line-height: 150%;
+    border: solid 6px Black; }
+    #rh-full-page-regulations .rh-regulations a {
+      color: Black;
+      text-decoration: underline; }
   #rh-full-page-regulations .rh-inner-container {
     height: calc(100% - 64px);
     overflow: scroll;
     -webkit-overflow-scrolling: touch;
     overflow-x: hidden;
     text-align: left;
-    border: solid 1px #e2e2e2;
+    border: solid 1px Black;
     -webkit-overflow-scrolling: touch; }
   #rh-full-page-regulations .rh-text {
     padding: 0 16px; }
@@ -41,7 +45,7 @@
     text-align: right; }
     #rh-full-page-regulations .rh-tools button {
       border-radius: 0px;
-      background-color: #00b1f7;
+      background-color: Black;
       border: none;
       padding: 8px 16px;
       color: White;
@@ -50,7 +54,7 @@
     #rh-full-page-regulations .rh-tools button:disabled {
       background-color: Silver; }
     #rh-full-page-regulations .rh-tools button:not(:disabled):hover {
-      background-color: #44caff; }
+      background-color: #262626; }
     #rh-full-page-regulations .rh-tools a {
       display: inline-block;
       padding: 8px 16px;
@@ -74,14 +78,5 @@
   -o-filter: blur(2px);
   -ms-filter: blur(2px);
   filter: blur(2px); }
-
-::-webkit-scrollbar {
-  -webkit-appearance: none;
-  width: 7px; }
-
-::-webkit-scrollbar-thumb {
-  border-radius: 4px;
-  background-color: rgba(0, 0, 0, 0.5);
-  box-shadow: 0 0 1px rgba(255, 255, 255, 0.5); }
 
 /*# sourceMappingURL=main.css.map */
