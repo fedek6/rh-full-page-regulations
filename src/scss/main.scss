@@ -29,7 +29,7 @@ $discard-color: rgb(202, 4, 4);
   align-items: center;
 
   opacity: 1;
-  transition: opacity .25s ease-out;
+  transition: opacity 0.25s ease-out;
 
   // Regulations container, this is actual window with agreement and buttons
   .rh-regulations {
@@ -45,13 +45,16 @@ $discard-color: rgb(202, 4, 4);
 
   .rh-inner-container {
     height: calc(100% - 64px);
-    overflow-y: scroll;
+    // width:  100%;
+    overflow: scroll;
     -webkit-overflow-scrolling: touch;
     overflow-x: hidden;
     text-align: left;
 
     border: solid 1px $inner-border;
     // border-radius: 10px 10px 10px 10px;
+
+    -webkit-overflow-scrolling: touch;
   }
 
   .rh-text {
@@ -75,7 +78,7 @@ $discard-color: rgb(202, 4, 4);
       transition: background-color 0.25s ease-out;
     }
     button:disabled {
-        background-color: $button-disabled;
+      background-color: $button-disabled;
     }
     button:not(:disabled):hover {
       background-color: lighten($button-color, 15%);
@@ -99,7 +102,6 @@ $discard-color: rgb(202, 4, 4);
 #rh-full-page-regulations[aria-hidden="true"] {
   opacity: 0;
 }
-
 
 /**
  * When content is not active

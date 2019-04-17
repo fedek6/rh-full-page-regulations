@@ -16,7 +16,7 @@
   align-content: stretch;
   align-items: center;
   opacity: 1;
-  transition: opacity .25s ease-out; }
+  transition: opacity 0.25s ease-out; }
   #rh-full-page-regulations .rh-regulations {
     height: 90%;
     max-width: 800px;
@@ -27,11 +27,12 @@
     box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.3); }
   #rh-full-page-regulations .rh-inner-container {
     height: calc(100% - 64px);
-    overflow-y: scroll;
+    overflow: scroll;
     -webkit-overflow-scrolling: touch;
     overflow-x: hidden;
     text-align: left;
-    border: solid 1px #e2e2e2; }
+    border: solid 1px #e2e2e2;
+    -webkit-overflow-scrolling: touch; }
   #rh-full-page-regulations .rh-text {
     padding: 0 16px; }
   #rh-full-page-regulations .rh-tools {
@@ -73,5 +74,14 @@
   -o-filter: blur(2px);
   -ms-filter: blur(2px);
   filter: blur(2px); }
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px; }
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 1px rgba(255, 255, 255, 0.5); }
 
 /*# sourceMappingURL=main.css.map */
