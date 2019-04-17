@@ -1,0 +1,114 @@
+/**
+ * Full page regualations
+ */
+$overlay-color: Silver;
+$bg-color: White;
+$inner-border: rgb(226, 226, 226);
+$tools-align: right;
+// Accept button color
+$button-color: rgb(0, 177, 247);
+$button-disabled: Silver;
+// Discard link
+$discard-color: rgb(202, 4, 4);
+
+#rh-full-page-regulations {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: transparentize($overlay-color, 0.25);
+  box-sizing: border-box;
+  padding: 32px;
+  z-index: 1033;
+
+  // Flex to center content
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: stretch;
+  align-items: center;
+
+  opacity: 1;
+  transition: opacity .25s ease-out;
+
+  // Regulations container, this is actual window with agreement and buttons
+  .rh-regulations {
+    height: 90%;
+    max-width: 800px;
+    max-height: 1000px;
+    width: 100%;
+    background-color: $bg-color;
+    padding: 32px 16px 16px 16px;
+
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.3);
+  }
+
+  .rh-inner-container {
+    height: calc(100% - 64px);
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    overflow-x: hidden;
+    text-align: left;
+
+    border: solid 1px $inner-border;
+    // border-radius: 10px 10px 10px 10px;
+  }
+
+  .rh-text {
+    padding: 0 16px;
+  }
+
+  .rh-tools {
+    height: 64px;
+    line-height: 64px;
+    text-align: $tools-align;
+
+    // Accept
+    button {
+      border-radius: 0px;
+      background-color: $button-color;
+      border: none;
+      padding: 8px 16px;
+      color: White;
+      cursor: pointer;
+
+      transition: background-color 0.25s ease-out;
+    }
+    button:disabled {
+        background-color: $button-disabled;
+    }
+    button:not(:disabled):hover {
+      background-color: lighten($button-color, 15%);
+    }
+
+    // Discard
+    a {
+      display: inline-block;
+      padding: 8px 16px;
+      color: $discard-color;
+      text-decoration: none;
+      margin-right: 8px;
+
+      transition: color 0.5s ease-out;
+    }
+    a:hover {
+      color: lighten($discard-color, 15%);
+    }
+  }
+}
+#rh-full-page-regulations[aria-hidden="true"] {
+  opacity: 0;
+}
+
+
+/**
+ * When content is not active
+ * Do something with it
+ */
+.not-active {
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  -ms-filter: blur(2px);
+  filter: blur(2px);
+}
