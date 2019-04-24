@@ -8,6 +8,14 @@ jQuery(document).ready(function ($) {
     var $btnAccept = $regulations.find('.accept').prop('disabled', true);
     var read = false;
 
+    // Check acceptance state
+    if(sessionStorage.getItem('rh-regulations-accepted') === 'true') {
+        $regulations.remove();
+        $($regulations.data('controls')).removeClass('not-active');
+    } else {
+        $regulations.attr('aria-hidden', 'false');
+    }
+
     /**
      * Accept action
      */
@@ -22,6 +30,9 @@ jQuery(document).ready(function ($) {
                 $regulations.remove();
             })
             .attr('aria-hidden', 'true');
+
+        // Set session storage
+        sessionStorage.setItem('rh-regulations-accepted', 'true');
     });
 
     $regulations

@@ -3,7 +3,7 @@
  */
 $overlay-color: White;
 $bg-color: White;
-$inner-border: Black;
+$inner-border: #EDEDED;
 $tools-align: right;
 // Accept button color
 $button-color: Black;
@@ -41,7 +41,7 @@ $discard-color: rgb(202, 4, 4);
     padding: 32px 16px 16px 16px;
 
     line-height: 150%;
-    border: solid 6px Black;
+    border: solid 8px Black;
     // box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.3);
 
     a {

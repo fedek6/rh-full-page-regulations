@@ -25,7 +25,7 @@
     background-color: White;
     padding: 32px 16px 16px 16px;
     line-height: 150%;
-    border: solid 6px Black; }
+    border: solid 8px Black; }
     #rh-full-page-regulations .rh-regulations a {
       color: Black;
       text-decoration: underline; }
@@ -35,7 +35,7 @@
     -webkit-overflow-scrolling: touch;
     overflow-x: hidden;
     text-align: left;
-    border: solid 1px Black;
+    border: solid 1px #EDEDED;
     -webkit-overflow-scrolling: touch; }
   #rh-full-page-regulations .rh-text {
     padding: 0 16px; }
