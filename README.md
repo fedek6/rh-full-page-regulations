@@ -2,17 +2,24 @@
 ![logo](https://realhe.ro/img/logo.svg "Realhe.ro")
 
 # rh-full-page-regulations
-Widget displaying full page consent (scroll down to go pass it).
+
+Widget for displaying full page consent (scroll down to enable accept – as seen on Google).
+
+## Usage
 
 ```
 git clone https://github.com/fedek6/rh-fast-landing
-cd rh-fast-landing
+cd rh-full-page-regulations
 npm install
-grunt assets
-grunt images
-grunt packages
+grunt
 cd public
 ```
+You'll find your files in public directory.
 
+## Preview
 
-And it's there! Saaaay what? Your website is in public dir :)
+![Preview](preview.png)
+
+## Demo
+
+You can check demo [here](https://realhe.ro/projects/rh-full-page-regulations/).

@@ -8,8 +8,12 @@ jQuery(document).ready(function ($) {
     var $btnAccept = $regulations.find('.accept').prop('disabled', true);
     var read = false;
 
+    // Check if previously accepted
+    var accepted = (sessionStorage.getItem('rh-regulations-accepted') === 'true') ? true : false;
+
     // Check acceptance state
-    if(sessionStorage.getItem('rh-regulations-accepted') === 'true') {
+    // if accepted hide
+    if(accepted) {
         $regulations.remove();
         $($regulations.data('controls')).removeClass('not-active');
     } else {
@@ -22,7 +26,7 @@ jQuery(document).ready(function ($) {
     $btnAccept.click(function(e) {
         console.log('INFO: User accepted agreement.');
 
-        // Handle message
+        // Remove not active from main controller
         $($regulations.data('controls')).removeClass('not-active');
 
         $regulations
@@ -32,6 +36,7 @@ jQuery(document).ready(function ($) {
             .attr('aria-hidden', 'true');
 
         // Set session storage
+        // You may set your cookie here or whatever you want to do :)
         sessionStorage.setItem('rh-regulations-accepted', 'true');
     });
 
